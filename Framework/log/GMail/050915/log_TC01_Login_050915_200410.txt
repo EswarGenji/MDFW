@@ -1,0 +1,17 @@
+2015-05-09 20:04:34,615 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 
+2015-05-09 20:04:36,633 INFO  [CoreLib] 'eswar.genji' Value entered into the 'UserName' Text Box. 
+2015-05-09 20:04:38,095 INFO  [CoreLib] '8886872828' Value entered into the 'Password' Text Box. 
+2015-05-09 20:04:38,551 INFO  [CoreLib] Gmail Logout test cases 
+2015-05-09 20:04:38,554 INFO  [CoreLib] [TestResult name=test_TC01_Logout status=SUCCESS method=TC02_Logout.test_TC01_Logout()[pri:0, instance:com.gmail.tests.TC02_Logout@55cbf3f8] output={null}] 
+2015-05-09 20:04:38,558 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 20:04:38,559 INFO  [CoreLib] ###################################### 
+2015-05-09 20:04:38,559 INFO  [CoreLib] TC01 Status :: Pass 
+2015-05-09 20:04:38,560 INFO  [CoreLib] ###################################### 
+2015-05-09 20:04:45,722 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 
+2015-05-09 20:04:47,144 INFO  [CoreLib] 'eswar.genji' Value entered into the 'UserName' Text Box. 
+2015-05-09 20:04:48,160 INFO  [CoreLib] '8886872828' Value entered into the 'Password' Text Box. 
+2015-05-09 20:04:48,597 INFO  [CoreLib] [TestResult name=test_TC01_Login status=SUCCESS method=TC01_Login.test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@6b438186] output={null}] 
+2015-05-09 20:04:48,597 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 20:04:48,608 INFO  [CoreLib] ###################################### 
+2015-05-09 20:04:48,608 INFO  [CoreLib] TC01 Status :: Pass 
+2015-05-09 20:04:48,608 INFO  [CoreLib] ###################################### 

@@ -1,0 +1,10 @@
+2015-05-09 19:48:18,046 ERROR [CoreLib] Error occured while lanching the Browser ::'GC' 
+2015-05-09 19:48:18,107 INFO  [CoreLib] [TestResult name=test_TC01_Logout status=FAILURE method=TC02_Logout.test_TC01_Logout()[pri:0, instance:com.gmail.tests.TC02_Logout@1cecbb6e] output={null}] 
+2015-05-09 19:48:18,111 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 19:48:18,126 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail 
+2015-05-09 19:48:18,128 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\\050915 
+2015-05-09 19:48:18,136 ERROR [CoreLib] Error Occured while taking the Screenshot... null 
+2015-05-09 19:48:18,136 INFO  [CoreLib] ###################################### 
+2015-05-09 19:48:18,137 INFO  [CoreLib] TC01 Status :: Fail 
+2015-05-09 19:48:18,137 INFO  [CoreLib] ###################################### 
+2015-05-09 19:48:22,832 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 

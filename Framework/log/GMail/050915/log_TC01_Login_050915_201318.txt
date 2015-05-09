@@ -1,0 +1,23 @@
+2015-05-09 20:13:38,358 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 
+2015-05-09 20:13:39,181 INFO  [CoreLib] 'eswar.genji' Value entered into the 'UserName' Text Box. 
+2015-05-09 20:13:39,183 INFO  [CoreLib] Directory Created :: .\ScreenShots 
+2015-05-09 20:13:39,184 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail 
+2015-05-09 20:13:39,185 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC02_Logout 
+2015-05-09 20:13:39,204 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC02_Logout\201318 
+2015-05-09 20:13:42,058 INFO  [CoreLib] '8886872828' Value entered into the 'Password' Text Box. 
+2015-05-09 20:13:42,659 INFO  [CoreLib] Gmail Logout test cases 
+2015-05-09 20:13:42,662 INFO  [CoreLib] [TestResult name=test_TC01_Logout status=SUCCESS method=TC02_Logout.test_TC01_Logout()[pri:0, instance:com.gmail.tests.TC02_Logout@1cecbb6e] output={null}] 
+2015-05-09 20:13:42,665 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 20:13:42,666 INFO  [CoreLib] ###################################### 
+2015-05-09 20:13:42,666 INFO  [CoreLib] TC01 Status :: Pass 
+2015-05-09 20:13:42,667 INFO  [CoreLib] ###################################### 
+2015-05-09 20:13:51,235 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 
+2015-05-09 20:13:52,046 INFO  [CoreLib] 'eswar.genji' Value entered into the 'UserName' Text Box. 
+2015-05-09 20:13:52,047 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC01_Login 
+2015-05-09 20:13:52,074 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC01_Login\201318 
+2015-05-09 20:13:53,728 INFO  [CoreLib] '8886872828' Value entered into the 'Password' Text Box. 
+2015-05-09 20:13:54,112 INFO  [CoreLib] [TestResult name=test_TC01_Login status=SUCCESS method=TC01_Login.test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@40fe4ac9] output={null}] 
+2015-05-09 20:13:54,113 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 20:13:54,113 INFO  [CoreLib] ###################################### 
+2015-05-09 20:13:54,113 INFO  [CoreLib] TC01 Status :: Pass 
+2015-05-09 20:13:54,113 INFO  [CoreLib] ###################################### 

@@ -1,0 +1,22 @@
+2015-05-09 20:10:53,214 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 
+2015-05-09 20:10:55,091 INFO  [CoreLib] 'eswar.genji' Value entered into the 'UserName' Text Box. 
+2015-05-09 20:10:55,093 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail 
+2015-05-09 20:10:55,094 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC01_Login 
+2015-05-09 20:10:55,110 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC01_Login\050915 
+2015-05-09 20:10:56,573 INFO  [CoreLib] '8886872828' Value entered into the 'Password' Text Box. 
+2015-05-09 20:10:57,083 INFO  [CoreLib] [TestResult name=test_TC01_Login status=SUCCESS method=TC01_Login.test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@40fe4ac9] output={null}] 
+2015-05-09 20:10:57,087 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 20:10:57,087 INFO  [CoreLib] ###################################### 
+2015-05-09 20:10:57,088 INFO  [CoreLib] TC01 Status :: Pass 
+2015-05-09 20:10:57,088 INFO  [CoreLib] ###################################### 
+2015-05-09 20:11:05,029 INFO  [CoreLib] Application Loaded with URL 'https://www.gmail.com' 
+2015-05-09 20:11:06,687 INFO  [CoreLib] 'eswar.genji' Value entered into the 'UserName' Text Box. 
+2015-05-09 20:11:06,688 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC02_Logout 
+2015-05-09 20:11:06,704 INFO  [CoreLib] Directory Created :: .\ScreenShots\GMail\TC02_Logout\050915 
+2015-05-09 20:11:07,621 INFO  [CoreLib] '8886872828' Value entered into the 'Password' Text Box. 
+2015-05-09 20:11:07,997 INFO  [CoreLib] Gmail Logout test cases 
+2015-05-09 20:11:07,999 INFO  [CoreLib] [TestResult name=test_TC01_Logout status=SUCCESS method=TC02_Logout.test_TC01_Logout()[pri:0, instance:com.gmail.tests.TC02_Logout@1cecbb6e] output={null}] 
+2015-05-09 20:11:07,999 INFO  [CoreLib] Test Parameters Size  ::0 
+2015-05-09 20:11:07,999 INFO  [CoreLib] ###################################### 
+2015-05-09 20:11:07,999 INFO  [CoreLib] TC01 Status :: Pass 
+2015-05-09 20:11:07,999 INFO  [CoreLib] ###################################### 
