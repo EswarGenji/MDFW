@@ -16,7 +16,7 @@
   
   <Features>
   
-    <EMail>true</EMail>
+    <EMail>false</EMail>
     <Screenshots>true</Screenshots>
   
   </Features>
