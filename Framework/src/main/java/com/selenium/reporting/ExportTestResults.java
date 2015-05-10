@@ -68,9 +68,11 @@ public class ExportTestResults {
 				CoreLib.createDir(testResultPath);
 				testResultPath = testResultPath+"//"+ConfigDetails.release;
 				CoreLib.createDir(testResultPath);
-				testResultPath=testResultPath+"//"+scrShotDir;
+				
+				
+				/*testResultPath=testResultPath+"//"+scrShotDir;
 				CoreLib.createDir(testResultPath);
-					
+					*/
 				
 				
 				testHTMLResultPath = testResultPath+ "//" + htmlFileName;
