@@ -52,11 +52,14 @@ public class ExportTestResults {
 
 				//String tModuleName=GlobalVars.strModName;
 				
-				String timeStamp = strReportFileName.format(new Date());
+				//String timeStamp = strReportFileName.format(new Date());
 				
 
-				fileName = ConfigDetails.release+"_Test Results_"+timeStamp+".xls";
-				htmlFileName = ConfigDetails.release+"_Test Results_"+timeStamp+".html";
+				//fileName = ConfigDetails.release+"_Test Results_"+timeStamp+".xls";
+				//htmlFileName = ConfigDetails.release+"_Test Results_"+timeStamp+".html";
+				
+				fileName = ConfigDetails.appName+"_"+ConfigDetails.release+"_Test Results.xls";
+				htmlFileName = ConfigDetails.appName+"_"+ConfigDetails.release+"_Test Results.html";
 				
 			    String path=".//Reports";
 			    CoreLib.createDir(path);
