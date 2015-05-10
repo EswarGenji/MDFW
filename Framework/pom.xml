@@ -12,6 +12,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <testNGSourceDirectory>src/test/java/com/gmail/suites</testNGSourceDirectory>
   </properties>
   
   <build>
@@ -39,9 +40,20 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.12.4</version>
 				<configuration>
+				
+				<!-- Run a specific testNG suite -->
+				<!-- 
 				<suiteXmlFiles>
-				<suiteXmlFile>Smoke.xml</suiteXmlFile>
+				<suiteXmlFile>${testNGSourceDirectory}/Suite_Login.xml</suiteXmlFile>
+				</suiteXmlFiles> 
+				-->
+				
+				<!-- parameterized testNG suite via maven -->
+				<suiteXmlFiles>
+					<suiteXmlFile>${testNGSourceDirectory}/${suiteFile}</suiteXmlFile>
 				</suiteXmlFiles>
+					
+				
 				</configuration>
 		</plugin>    
 
