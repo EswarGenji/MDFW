@@ -382,12 +382,21 @@ public class TemplateGenerator {
 		    	
 		    	 System.out.println("Screenshot    Path ::"+screenshotPath);
 		    	 
-		    	 if(tcResult.equals("Pass"))
+		    	/* if(tcResult.equals("Pass"))
 		    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"pass\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
 		    	 else if(tcResult.equals("Fail"))
 		    	 	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"fail\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><a href=\""+screenshotPath+"\"  target=\"_blank\">Click Here</a></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
 		    	 else
-		    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"skip\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
+		    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"skip\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";*/
+		    	 
+		     if(tcResult.equals("Pass"))
+		    	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"pass\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><img src=\""+screenshotPath+"\" alt=\"Mountain View\" style=\"width:304px;height:228px\"></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
+	    	 else if(tcResult.equals("Fail"))
+	    	 	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"fail\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><a href=\""+screenshotPath+"\"  target=\"_blank\">Click Here</a></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
+	    	 else
+	    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"skip\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
+	    	 
+		    	 
 		     }
 		     
 			
