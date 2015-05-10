@@ -18,7 +18,7 @@ public class MailReport{
 	public void sendMailReport(int total, int passed, int failed)
 	{
 		String configXlsPath="./config.xml";
-    	String blockName="Gmail";
+    	String blockName=ConfigDetails.appName+"_Mail";
     	
     	final String username=CoreLib.fGetNodeText(configXlsPath,blockName,"UserName");
     	final String password=CoreLib.fGetNodeText(configXlsPath,blockName,"Password");
@@ -29,7 +29,7 @@ public class MailReport{
     	String fromAddress=CoreLib.fGetNodeText(configXlsPath,blockName,"from");
     	String recepient=CoreLib.fGetNodeText(configXlsPath,blockName,"recipients");
     
-    	String subject="CAMMIS "+ConfigDetails.release+"Automation Report";
+    	String subject=ConfigDetails.appName+" "+ConfigDetails.release+" Automation Report";
     	String msg="<body><font size=4 color=DarkBlue><title>&nbsp; CAMMIS &nbsp;Execution Summary</title><br/>"
     			+ "<b>Hi All,</b><br/><br/>&nbsp;&nbsp;Please find the Automation execution summary for<em><b>"
     			+ "&nbsp; CAMMIS &nbsp;</b></em><br/><br> &&Counters&& <br> <br/><br/>&nbsp;<b>Note</b>:"

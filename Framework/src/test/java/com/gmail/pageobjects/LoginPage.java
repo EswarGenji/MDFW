@@ -47,7 +47,15 @@ public class LoginPage {
 		try
 		{
 			String eAccountImage="//a[contains(@title,'Account')]";
+			String eSignout="//a[text()='Sign out']";
+			String eSignIn="signIn";
+			
 			DriverLib.fClickElement(driver,eAccountImage,"AccountIcon",true);
+			DriverLib.fClickAndWait(driver, eSignout, "Siginout",true);
+			DriverLib.fVerifyElementPresent(driver,eSignIn,"SignIn",true);
+			
+			CoreLib.LOGGER.info(" Application Logout Successfully ");
+			
 		}
 		catch(Exception e)
 		{

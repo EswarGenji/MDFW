@@ -44,7 +44,7 @@ public class DriverLib {
 	public static WebDriver driver;
 	static String configXlsPath = "./config.xml";
    	private static SimpleDateFormat scrShot = new SimpleDateFormat("MMddyy_HHmmss");
-	private static String scrShotDir = new SimpleDateFormat("HHmmss").format(new Date());
+	private static String scrShotDir = new SimpleDateFormat("MMddyy_HHmmss").format(new Date());
 
 	public boolean acceptNextAlert = true;
 
@@ -56,7 +56,7 @@ public class DriverLib {
 	 * @purpose : Launching the Browser
 	 * ********************************************************************************************************************************************************************/
 	public static WebDriver fLanchBrowser() {
-		 WebDriver driver=null;	
+		 //WebDriver driver=null;	
 		 String browserType=ConfigDetails.browser;
 		try {
 				  
@@ -511,6 +511,46 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 		}
 	}
 
+	public static void fWaitForElementPresent(WebDriver driver,int waitTime, String elmtLocator)
+			throws Exception {
+		try {
+			int i = 0;
+			if (waitTime > 1000)
+				waitTime = waitTime / 1000;
+
+			for (i = 0; i < waitTime; i++) {
+				By by = locatorToByObj(driver,elmtLocator);
+
+				if (by == null)
+					Thread.sleep(1000);
+				else
+					break;
+
+				System.out.println("Waiting for Element  '" + elmtLocator+ "' ");
+				//CoreLib.LOGGER.info("Waiting for Element  '" + elmtLocator+ "' ");
+			}
+
+			if (i == waitTime)
+
+			{
+				CoreLib.LOGGER.error("Element  '" + elmtLocator
+						+ "' =not found after " + waitTime + " seconds ");
+				Assert.fail("Element  '" + elmtLocator + "' =not found after "
+						+ waitTime + " seconds ");
+
+			}
+			
+			
+
+		} catch (Exception e) {
+			CoreLib.LOGGER.error("Element  ' " + elmtLocator
+					+ " ' =not found after " + waitTime + " seconds "
+					+ e.getMessage());
+			Assert.fail("Element  '" + elmtLocator + "' =not found after "
+					+ waitTime + " seconds " + e.getMessage());
+		}
+	}
+
 	/*******************************************************************************************************************************************************************
 	 * @Date Created : 14/10/2014
 	 * @author : EGenji
@@ -579,6 +619,23 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 			Assert.fail("Element ' " + elmtLocator
 					+ " '  not found in the Web Page."
 					+ timeoutException.getMessage());
+		}
+	}
+
+	public static void fVerifyElementPresent(WebDriver driver,String elmtLocator,String fieldName,Boolean falg) throws Exception {
+		try 
+		{
+
+			DriverLib.fWaitForElementPresent(driver,GlobalVars.waitTime, elmtLocator);
+			boolean flag = DriverLib.fIsElementPresent(elmtLocator);
+			Assert.assertTrue(flag,"'"+ fieldName+ "' Not Present in the Web Page. Please Check the Locator..'"+elmtLocator+"'");
+			CoreLib.LOGGER.info(""+fieldName+"' Element found in the Page.");
+
+		} 
+		catch (Exception timeoutException)
+		{
+			CoreLib.LOGGER.error("Element ' " + elmtLocator+ " '  not found in the Web Page."+ timeoutException.getMessage());
+			Assert.fail("Element ' " + elmtLocator+ " '  not found in the Web Page."+ timeoutException.getMessage());
 		}
 	}
 
@@ -1113,7 +1170,7 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 		try 
 		{
 
-			DriverLib.fWaitForElementPresent(GlobalVars.waitTime, eButtonID);
+			DriverLib.fWaitForElementPresent(driver,GlobalVars.waitTime, eButtonID);
 			WebElement element = DriverLib.fGetWebElement(eButtonID);
 			element.click();
 			Thread.sleep(2000);

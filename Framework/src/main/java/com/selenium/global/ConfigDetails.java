@@ -24,8 +24,8 @@ public class ConfigDetails {
 			url     = CoreLib.fGetNodeText(configXlsPath, appName, "url");
 			
 			
-			isEmail=CoreLib.fGetNodeText(configXlsPath, "Properties","EMail");
-			isScreenshot=CoreLib.fGetNodeText(configXlsPath, "Properties","Screenshots");
+			isEmail=CoreLib.fGetNodeText(configXlsPath, "Features","EMail");
+			isScreenshot=CoreLib.fGetNodeText(configXlsPath, "Features","Screenshots");
 		}
 		catch(Exception e)
 		{

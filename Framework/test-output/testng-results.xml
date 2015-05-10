@@ -1,55 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="75693" started-at="2015-05-09T18:29:52Z" finished-at="2015-05-09T18:31:08Z">
+  <suite name="Default suite" duration-ms="80603" started-at="2015-05-10T15:19:32Z" finished-at="2015-05-10T15:20:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="75693" started-at="2015-05-09T18:29:52Z" finished-at="2015-05-09T18:31:08Z">
+    <test name="Default test" duration-ms="80603" started-at="2015-05-10T15:19:32Z" finished-at="2015-05-10T15:20:53Z">
       <class name="com.gmail.tests.TC01_Login">
-        <test-method status="FAIL" signature="test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@262f4873]" name="test_TC01_Login" duration-ms="75248" started-at="2015-05-09T23:59:52Z" finished-at="2015-05-10T00:01:07Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Element  '//a[contains(@title,'Account')]' =not found after 10 seconds ]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Element  '//a[contains(@title,'Account')]' =not found after 10 seconds 
-	at org.testng.Assert.fail(Assert.java:94)
-	at com.selenium.webdriver.DriverLib.fWaitForElementPresent(DriverLib.java:419)
-	at com.selenium.webdriver.DriverLib.fClickElement(DriverLib.java:1116)
-	at com.gmail.pageobjects.LoginPage.fLogout(LoginPage.java:50)
-	at com.gmail.tests.TC01_Login.test_TC01_Login(TC01_Login.java:33)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@29d0eefb]" name="test_TC01_Login" duration-ms="80247" started-at="2015-05-10T20:49:32Z" finished-at="2015-05-10T20:50:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_TC01_Login -->
-        <test-method status="PASS" signature="fCloseBrowser()[pri:0, instance:com.gmail.tests.TC01_Login@262f4873]" name="fCloseBrowser" is-config="true" duration-ms="30" started-at="2015-05-10T00:01:08Z" finished-at="2015-05-10T00:01:08Z">
+        <test-method status="PASS" signature="fCloseBrowser()[pri:0, instance:com.gmail.tests.TC01_Login@29d0eefb]" name="fCloseBrowser" is-config="true" duration-ms="24" started-at="2015-05-10T20:50:53Z" finished-at="2015-05-10T20:50:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fCloseBrowser -->

@@ -8,6 +8,7 @@ import java.util.List;
 import org.testng.ITestResult;
 
 import com.selenium.core.CoreLib;
+import com.selenium.global.ConfigDetails;
 import com.selenium.global.GlobalVars;
 import com.selenium.webdriver.DriverLib;
 
@@ -57,8 +58,8 @@ public void fGenerateExcelReport(ITestResult result)
 			
 			if(methodName.contains("_"))
 			{
-				tcId=methodName.split("_")[0];
-				tcName=methodName.split("_")[1];
+				tcId=methodName.split("_")[1];
+				tcName=methodName.split("_")[2];
 			}
 			
 		}
@@ -102,7 +103,7 @@ public void fGenerateExcelReport(ITestResult result)
 				if(errorMessage.length()>200)
 					errorMessage=errorMessage.substring(0,200);
 				//calling take a screenshot code method
-				screenshotPath= DriverLib.fTakeScreenShot(GlobalVars.strModName,tcExeDetails.get(1));
+				screenshotPath= DriverLib.fTakeScreenShot(GlobalVars.testName,"Failed");
 			break;
  
 		case ITestResult.SKIP:
@@ -171,8 +172,13 @@ public void fGenerateHTMLReport()
     		
     		template.buildTemplate(total, passed, failed);
     		
-    		//MailReport mail=new MailReport();
-        	//mail.sendMailReport(total, passed, failed);
+    		MailReport mail=new MailReport();
+    		if(ConfigDetails.isEmail.equalsIgnoreCase("true"))
+    			mail.sendMailReport(total, passed, failed);
+    			
+    		
+    	
+        	
     		
     	}
     	catch(Exception e)
