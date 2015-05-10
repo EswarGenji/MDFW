@@ -12,7 +12,7 @@
   <test name="Gmail Tests" >
     <classes>
       <class name="com.gmail.tests.TC01_Login"/>
-      <class name="com.gmail.tests.TC02_Logout"/>
+      <!-- <class name="com.gmail.tests.TC02_Logout"/> -->
         
   </classes>
   

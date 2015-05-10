@@ -11,7 +11,7 @@ import com.app.tests.WebUITest;
 import com.gmail.pageobjects.LoginPage;
 import com.selenium.global.GlobalVars;
 
-@Listeners(com.selenium.reporting.MyListener.class)
+//@Listeners(com.selenium.reporting.MyListener.class)
 public class TC01_Login extends WebUITest{
 	
 	public WebDriver driver;
