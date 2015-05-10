@@ -37,12 +37,12 @@ public class WebUITest {
 	 }
 	 
 	 
-	 @AfterMethod
+	/* @AfterMethod
 	 public void fCloseBrowser()
 	 {
 		 if(driver !=null)
 			 driver.close();
-	 }
+	 }*/
 	
 	/*@BeforeTest
 	public void fLanchApp()
