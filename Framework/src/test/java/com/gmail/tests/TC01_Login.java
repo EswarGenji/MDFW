@@ -4,7 +4,6 @@ package com.gmail.tests;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.app.tests.WebUITest;
@@ -21,6 +20,13 @@ public class TC01_Login extends WebUITest{
 	{
 		try
 		{
+			
+			
+			System.out.println("********************************************");
+			System.out.println("          TC01  Login                       ");
+			System.out.println("********************************************");
+			
+			
 			GlobalVars.strModName="Login";
 			String className = this.getClass().getName();
 			driver=intialize(className);
@@ -34,6 +40,9 @@ public class TC01_Login extends WebUITest{
 			login.fLogin(tUserName,tPassword);
 			login.fLogout();
 			
+			System.out.println("********************************************");
+			System.out.println("          TC01  Login  Ended                ");
+			System.out.println("********************************************");
 			
 		}
 		catch(Exception e){

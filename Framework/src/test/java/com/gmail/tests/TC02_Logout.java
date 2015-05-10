@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import com.app.tests.WebUITest;
 import com.gmail.pageobjects.LoginPage;
-import com.selenium.core.CoreLib;
 import com.selenium.global.GlobalVars;
 
 
@@ -21,6 +20,10 @@ public class TC02_Logout extends WebUITest{
 	{
 		try
 		{
+			System.out.println("********************************************");
+			System.out.println("          TC02  Logout                      ");
+			System.out.println("********************************************");
+			
 			GlobalVars.strModName="Logout";
 			String className = this.getClass().getName();
 			driver=intialize(className);
@@ -33,6 +36,10 @@ public class TC02_Logout extends WebUITest{
 			
 			login.fLogin(tUserName,tPassword);
 			login.fLogout();
+			
+			System.out.println("********************************************");
+			System.out.println("          TC02  Logout Ended                ");
+			System.out.println("********************************************");
 			
 			
 		}
