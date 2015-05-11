@@ -2,7 +2,6 @@ package com.gmail.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.app.tests.WebUITest;
@@ -49,10 +48,5 @@ public class TC02_Logout extends WebUITest{
 		}
 	}
 	
-	 @AfterTest
-	 public void fCloseBrowser()
-	 {
-		 if(driver !=null)
-			 driver.close();
-	 }
+	
 }

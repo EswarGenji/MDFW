@@ -25,8 +25,13 @@ public class LoginPage {
 			String ePassword="Passwd";
 			String eSignIn="signIn";
 			String eAccountImage="//a[contains(@title,'Account')]";
-			
+			String eNext="//input[@value='Next']";
 			DriverLib.fInputText(driver,eUserName, tUserName,"UserName",true);
+			
+			
+			if(DriverLib.fIsElementPresent(eNext))
+			  DriverLib.fClickAndWait(driver,eNext,"Next",true);
+			
 			DriverLib.fInputText(driver,ePassword, tPassword,"Password",true);
 			DriverLib.fClickAndWait(driver,eSignIn,"SignIn",true);
 			DriverLib.fWaitForElementPresent(driver,GlobalVars.waitTime,eAccountImage,"AccountImage",true);

@@ -37,24 +37,14 @@ public class WebUITest {
 	 }
 	 
 	 
-	/* @AfterMethod
+	 @AfterMethod
 	 public void fCloseBrowser()
 	 {
+		 
+		  System.out.println("After  Method...");
 		 if(driver !=null)
 			 driver.close();
-	 }*/
+	 }
 	
-	/*@BeforeTest
-	public void fLanchApp()
-	{
-		DriverLib.fLanchBrowser();
-		DriverLib.fOpenApplication();
-	}
 	
-	@AfterTest
-	public void fCloseBrowser()
-	{
-		DriverLib.fClose();
-	}*/
-
 }
