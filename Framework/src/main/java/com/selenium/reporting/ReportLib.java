@@ -89,7 +89,7 @@ public void fGenerateExcelReport(ITestResult result)
 				mPassed++;
 				status = "Pass";
 				errorMessage="";
-				screenshotPath=DriverLib.fTakeScreenShot(GlobalVars.testName,"Failed");
+				screenshotPath=DriverLib.fTakeScreenShot(GlobalVars.testName,"Passed");
 	 
 			break;
  

@@ -52,14 +52,14 @@ public class ExportTestResults {
 
 				//String tModuleName=GlobalVars.strModName;
 				
-				//String timeStamp = strReportFileName.format(new Date());
-				
-
-				//fileName = ConfigDetails.release+"_Test Results_"+timeStamp+".xls";
-				//htmlFileName = ConfigDetails.release+"_Test Results_"+timeStamp+".html";
+				String timeStamp = strReportFileName.format(new Date());
 				
 				fileName = ConfigDetails.appName+"_"+ConfigDetails.release+"_Test Results.xls";
 				htmlFileName = ConfigDetails.appName+"_"+ConfigDetails.release+"_Test Results.html";
+				
+				String renameHTMLFileName =ConfigDetails.appName+"_"+ConfigDetails.release+"_Test Results_"+timeStamp+".html";
+				String renameExcelFileName =ConfigDetails.appName+"_"+ConfigDetails.release+"_Test Results_"+timeStamp+".xls";
+				
 				
 			    String path=".//Reports";
 			    CoreLib.createDir(path);
@@ -74,10 +74,22 @@ public class ExportTestResults {
 				CoreLib.createDir(testResultPath);
 					*/
 				
+				String reNameFHtmlFilePath=testResultPath+"//"+renameHTMLFileName;
+				String reNameExcelFilePath=testResultPath+"//"+renameExcelFileName;
+				
 				
 				testHTMLResultPath = testResultPath+ "//" + htmlFileName;
 				testResultPath = testResultPath + "//"+ fileName;
 						
+				
+				File htmlFile=new File(testHTMLResultPath);
+				File excelFile=new File(testResultPath);
+				
+				if(htmlFile.exists())
+					htmlFile.renameTo(new File(reNameFHtmlFilePath));
+				if(excelFile.exists())
+					excelFile.renameTo(new File(reNameExcelFilePath));
+				
 				
 				GlobalVars.testHTMLResultPath=testHTMLResultPath;
 				GlobalVars.TestResultsPath=testResultPath;
