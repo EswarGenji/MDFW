@@ -1,0 +1,18 @@
+<dataset>
+  <data>
+    
+	<Login>
+	
+	  <EUserName>Email</EUserName>
+	  <EPassword>Passwd</EPassword>
+	  <ESignIn>signIn</ESignIn>
+	  <ENext>//input[@value='Next']</ENext>
+	
+	</Login>
+	
+	
+	
+	
+	
+  </data>
+</dataset>

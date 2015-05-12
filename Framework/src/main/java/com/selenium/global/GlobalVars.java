@@ -11,7 +11,7 @@ import java.util.List;
 			  
 			  
 			  public static final String locOfData="./TestData/CAMMIS/";
-			  public static final String locOfPages="./ObjectRepository/Pages/";
+			  public static final String locOfPages="./Controls/";
 			  public static final String locOfDrivers="./Drivers/";
 			  public static String browser="";
 			  public static HashMap<String,List<String>> testCasesResutls=new HashMap<String,List<String>>();

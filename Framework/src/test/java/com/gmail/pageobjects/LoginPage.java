@@ -3,16 +3,32 @@ package com.gmail.pageobjects;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import com.gmail.common.GMailControls;
 import com.selenium.core.CoreLib;
 import com.selenium.global.GlobalVars;
 import com.selenium.webdriver.DriverLib;
 
 public class LoginPage {
 	
+	String eUserName=null;
+	String ePassword=null;
+	String eSignIn=null;
+	String eNext=null;
+	String eAccountImage=null;
+	String eSignout=null;
+	
 	public WebDriver driver;
 	 public LoginPage(WebDriver driver)
 	 {
 		 this.driver=driver;
+		 
+			eUserName=GMailControls.LoginPage.EUserName;
+			ePassword=GMailControls.LoginPage.EPassword;
+			eSignIn=GMailControls.LoginPage.ESignIn;
+			eNext=GMailControls.LoginPage.ENext;
+
+			eAccountImage=GMailControls.LogoutPage.EAccountImage;
+			eSignout=GMailControls.LogoutPage.ESignOut;
 	 }
 	
 	
@@ -21,14 +37,7 @@ public class LoginPage {
 		try
 		{
 			
-			String eUserName="Email";
-			String ePassword="Passwd";
-			String eSignIn="signIn";
-			String eAccountImage="//a[contains(@title,'Account')]";
-			String eNext="//input[@value='Next']";
 			DriverLib.fInputText(driver,eUserName, tUserName,"UserName",true);
-			
-			
 			if(DriverLib.fIsElementPresent(eNext))
 			  DriverLib.fClickAndWait(driver,eNext,"Next",true);
 			
@@ -51,10 +60,6 @@ public class LoginPage {
 	{
 		try
 		{
-			String eAccountImage="//a[contains(@title,'Account')]";
-			String eSignout="//a[text()='Sign out']";
-			String eSignIn="signIn";
-			
 			DriverLib.fClickElement(driver,eAccountImage,"AccountIcon",true);
 			DriverLib.fClickAndWait(driver, eSignout, "Siginout",true);
 			DriverLib.fVerifyElementPresent(driver,eSignIn,"SignIn",true);

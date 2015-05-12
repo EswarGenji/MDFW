@@ -1,0 +1,17 @@
+<dataset>
+  <data>
+    
+	<Logout>
+	
+	  <EAccountImage>//a[contains(@title,'Account')]</EAccountImage>
+	  <ESignOut>//a[text()='Sign out']</ESignOut>
+	  
+	
+	</Logout>
+	
+	
+	
+	
+	
+  </data>
+</dataset>
