@@ -34,6 +34,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
+
+
 import com.selenium.core.CoreLib;
 import com.selenium.global.ConfigDetails;
 import com.selenium.global.GlobalVars;
@@ -2673,19 +2675,28 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 		try {
 			GlobalVars.strScreenshotPath = "";
 			
-			String path=".\\ScreenShots";
+			String path=".//Reports";
 			CoreLib.createDir(path);
 			
-			String name = path+"\\" + ConfigDetails.appName;
-			CoreLib.createDir(name);
-
-			name = name + "\\" + testName;
-			CoreLib.createDir(name);
-
-			name = name + "\\" + scrShotDir;
-			CoreLib.createDir(name);
+			String strEnvDir = path +"//"+ ConfigDetails.appName;
+			CoreLib.createDir(strEnvDir);
 			
-			strScreenshotName = name + "\\" + testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
+			String strEnv = strEnvDir +"//"+ ConfigDetails.release;
+			CoreLib.createDir(strEnvDir);
+			
+			path=strEnv+"//ScreenShots";
+			CoreLib.createDir(path);
+			
+		/*	String name = path+"\\" + ConfigDetails.appName;
+			CoreLib.createDir(name);*/
+
+			path = path + "\\" + testName;
+			CoreLib.createDir(path);
+
+			path = path + "\\" + scrShotDir;
+			CoreLib.createDir(path);
+			
+			strScreenshotName = path + "\\" + testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
 			File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 			File sreenshotFile = new File(strScreenshotName);
