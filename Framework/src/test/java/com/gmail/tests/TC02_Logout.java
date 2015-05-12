@@ -15,7 +15,7 @@ public class TC02_Logout extends WebUITest{
 	public WebDriver driver;
 	
 	@Test
-	public void test_TC01_Logout()
+	public void test_TC02_Logout()
 	{
 		try
 		{
