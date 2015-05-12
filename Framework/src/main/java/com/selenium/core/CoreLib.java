@@ -115,7 +115,7 @@ public class CoreLib {
 			String strEnvDir = path +"//"+ ConfigDetails.appName;
 			createDir(strEnvDir);
 			
-			String strEnv = path +"//"+ ConfigDetails.release;
+			String strEnv = strEnvDir +"//"+ ConfigDetails.release;
 			createDir(strEnvDir);
 			
 			
