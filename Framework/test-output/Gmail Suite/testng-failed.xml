@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Failed suite [Gmail Suite]" parallel="methods">
+<suite name="Failed suite [Gmail Suite]">
   <listeners>
     <listener class-name="com.selenium.reporting.MyListener"/>
   </listeners>
-  <test name="Gmail Tests(failed)" parallel="methods">
+  <test name="Gmail Tests(failed)">
     <classes>
       <class name="com.gmail.tests.TC02_Logout">
         <methods>
@@ -14,7 +14,6 @@
       <class name="com.gmail.tests.TC01_Login">
         <methods>
           <include name="test_TC01_Login"/>
-          <include name="fCloseBrowser"/>
         </methods>
       </class> <!-- com.gmail.tests.TC01_Login -->
     </classes>

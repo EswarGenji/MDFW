@@ -68,7 +68,7 @@ public class CoreLib {
 
 	}
 
-	public static void fCreateLogger(String strModCode) {
+	/*public static void fCreateLogger(String strModCode) {
 		try {
 			
 			String path=".//log";
@@ -78,10 +78,53 @@ public class CoreLib {
 			String strEnvDir = path +"//"+ ConfigDetails.appName;
 			createDir(strEnvDir);
 			
-			/*String strModuleDir = strEnvDir+"//" + strModCode;
-			createDir(strModuleDir);*/
+			String strModuleDir = strEnvDir+"//" + strModCode;
+			createDir(strModuleDir);
 			String logDirPath = strEnvDir + "//" + strlogDir;
 			createDir(logDirPath);
+			String logFilePath = logDirPath + "//log_" + strModCode + "_"
+					+ strLogFileName.format(new Date()) + ".txt";
+			FileAppender appender = new FileAppender();
+			appender.setName("MyFileAppender");
+			appender.setLayout(new PatternLayout("%d %-5p [%c{1}] %m %n"));
+			appender.setFile(logFilePath);
+			appender.setAppend(true);
+			appender.setThreshold(Level.INFO);
+			appender.activateOptions();
+
+			LOGGER.addAppender(appender);
+
+			File logFile = new File(logFilePath);
+			GlobalVars.strLogFilePath=logFile.getCanonicalPath();
+
+			System.out.println(" Logger Path ::" + logFilePath);
+		} catch (Exception e) {
+			System.out
+					.println("Error Occured while creating the Logger Object..::"
+							+ e.getMessage());
+		}
+	}*/
+	
+	public static void fCreateLogger(String strModCode) {
+		try {
+			
+			String path=".//Reports";
+			createDir(path);
+			
+			
+			String strEnvDir = path +"//"+ ConfigDetails.appName;
+			createDir(strEnvDir);
+			
+			String strEnv = path +"//"+ ConfigDetails.release;
+			createDir(strEnvDir);
+			
+			
+			String strModuleDir = strEnv+"//log";
+			createDir(strModuleDir);
+			
+			String logDirPath = strModuleDir + "//" + strlogDir;
+			createDir(logDirPath);
+			
 			String logFilePath = logDirPath + "//log_" + strModCode + "_"
 					+ strLogFileName.format(new Date()) + ".txt";
 			FileAppender appender = new FileAppender();

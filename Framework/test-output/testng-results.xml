@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="80603" started-at="2015-05-10T15:19:32Z" finished-at="2015-05-10T15:20:53Z">
+  <suite name="Gmail Suite" duration-ms="131888" started-at="2015-05-12T18:15:04Z" finished-at="2015-05-12T18:17:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="80603" started-at="2015-05-10T15:19:32Z" finished-at="2015-05-10T15:20:53Z">
+    <test name="Gmail Tests" duration-ms="131888" started-at="2015-05-12T18:15:04Z" finished-at="2015-05-12T18:17:16Z">
+      <class name="com.gmail.tests.TC02_Logout">
+        <test-method status="PASS" signature="test_TC02_Logout()[pri:0, instance:com.gmail.tests.TC02_Logout@699e0533]" name="test_TC02_Logout" duration-ms="79218" started-at="2015-05-12T23:45:56Z" finished-at="2015-05-12T23:47:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_TC02_Logout -->
+        <test-method status="PASS" signature="fCloseBrowser()[pri:0, instance:com.gmail.tests.TC02_Logout@699e0533]" name="fCloseBrowser" is-config="true" duration-ms="17" started-at="2015-05-12T23:47:16Z" finished-at="2015-05-12T23:47:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fCloseBrowser -->
+      </class> <!-- com.gmail.tests.TC02_Logout -->
       <class name="com.gmail.tests.TC01_Login">
-        <test-method status="PASS" signature="test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@29d0eefb]" name="test_TC01_Login" duration-ms="80247" started-at="2015-05-10T20:49:32Z" finished-at="2015-05-10T20:50:53Z">
+        <test-method status="PASS" signature="test_TC01_Login()[pri:0, instance:com.gmail.tests.TC01_Login@5e378b9]" name="test_TC01_Login" duration-ms="51639" started-at="2015-05-12T23:45:04Z" finished-at="2015-05-12T23:45:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_TC01_Login -->
-        <test-method status="PASS" signature="fCloseBrowser()[pri:0, instance:com.gmail.tests.TC01_Login@29d0eefb]" name="fCloseBrowser" is-config="true" duration-ms="24" started-at="2015-05-10T20:50:53Z" finished-at="2015-05-10T20:50:53Z">
+        <test-method status="PASS" signature="fCloseBrowser()[pri:0, instance:com.gmail.tests.TC01_Login@5e378b9]" name="fCloseBrowser" is-config="true" duration-ms="13" started-at="2015-05-12T23:45:56Z" finished-at="2015-05-12T23:45:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- fCloseBrowser -->
       </class> <!-- com.gmail.tests.TC01_Login -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Gmail Tests -->
+  </suite> <!-- Gmail Suite -->
 </testng-results>
