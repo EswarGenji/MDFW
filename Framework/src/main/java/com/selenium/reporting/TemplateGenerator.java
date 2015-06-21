@@ -134,7 +134,8 @@ public class TemplateGenerator {
 		}
 
 		
-		 String scrshotBuild="file:///"+GlobalVars.strLogFilePath;
+		// String scrshotBuild="file:///"+GlobalVars.strLogFilePath;
+		 String scrshotBuild=GlobalVars.strLogFilePath;
 		 System.out.println("Build Summary Screenshot Path ::"+scrshotBuild);
 		 
 		 String time=TimeConversion.convertSecondsToHours(GlobalVars.totalTimeTaken);
@@ -376,26 +377,26 @@ public class TemplateGenerator {
 		    	 String tcTitle=resultDetails.get(3);
 		    	 String tcResult=resultDetails.get(4);
 		    	 String tcErrorMes=resultDetails.get(5);
-		    	 String screenshotPath="file:///"+resultDetails.get(6);
+		    	 String screenshotPath=resultDetails.get(6);
 		    	 String tcTimeStamp=resultDetails.get(7);
 		    	 String tcTimeTaken=resultDetails.get(8);
 		    	
 		    	 System.out.println("Screenshot    Path ::"+screenshotPath);
 		    	 
-		    	 if(tcResult.equals("Pass"))
+		    	/* if(tcResult.equals("Pass"))
 		    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"pass\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
 		    	 else if(tcResult.equals("Fail"))
 		    	 	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"fail\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><a href=\""+screenshotPath+"\"  target=\"_blank\">Click Here</a></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
 		    	 else
-		    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"skip\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
+		    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"skip\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";*/
 		    
-		     /*if(tcResult.equals("Pass"))
+		     if(tcResult.equals("Pass"))
 		    	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"pass\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><img src=\""+screenshotPath+"\" alt=\"Mountain View\" style=\"width:304px;height:228px\"></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
 	    	 else if(tcResult.equals("Fail"))
-	    	 	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"fail\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><a href=\""+screenshotPath+"\"  target=\"_blank\">Click Here</a></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
+	    	 	 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"fail\">"+tcResult+"</span></td><td>"+tcErrorMes+"</td><td><img src=\""+screenshotPath+"\" alt=\"Mountain View\" style=\"width:304px;height:228px\"></td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
 	    	 else
 	    		 testCasesExecutionDetails=testCasesExecutionDetails+"<tr><td>"+SNo+"</td><td>"+moduleName+"</td><td>"+tcId+"</td><td>"+tcTitle+"</td><td><span class=\"skip\">"+tcResult+"</span></td><td>&nbsp</td><td>&nbsp</td><td>"+tcTimeStamp+"</td><td>"+tcTimeTaken+"</td></tr>";
-	    	*/ 
+	    	 
 		    
 		     }
 		     

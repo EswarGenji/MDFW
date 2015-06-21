@@ -2672,6 +2672,7 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 	public static String fTakeScreenShot(String testName, String pageName) {
 
 		String strScreenshotName = null;
+		String fileName=null;
 		try {
 			GlobalVars.strScreenshotPath = "";
 			
@@ -2696,13 +2697,14 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 			path = path + "\\" + scrShotDir;
 			CoreLib.createDir(path);*/
 			
-			strScreenshotName = strEnv + "\\" + testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
+			fileName=testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
+			strScreenshotName = strEnv + "\\" + fileName;
 			File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 			File sreenshotFile = new File(strScreenshotName);
 			FileUtils.copyFile(f, sreenshotFile);
 
-			strScreenshotName = sreenshotFile.getCanonicalPath();
+			//strScreenshotName = sreenshotFile.getCanonicalPath();
 		} 
 		catch (Exception e) 
 		{
@@ -2712,12 +2714,13 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 
 		// strScreenshotName = ". Screen Shot : " + strScreenshotName;
 
-		return strScreenshotName;
+		return fileName;
 	}
 
 	public static String fTakeScreenShot(WebDriver driver,String testName, String pageName) {
 
 		String strScreenshotName = null;
+		String srcFileName=null;
 		try {
 			
 			
@@ -2737,13 +2740,14 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 					name = name + "\\" + scrShotDir;
 					CoreLib.createDir(name);
 					
-					strScreenshotName = name + "\\" + testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
+					srcFileName=testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
+					strScreenshotName = name + "\\" +srcFileName;
 					File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 					File sreenshotFile = new File(strScreenshotName);
 					FileUtils.copyFile(f, sreenshotFile);
 
-					strScreenshotName = sreenshotFile.getCanonicalPath();
+					//strScreenshotName = sreenshotFile.getCanonicalPath();
 			  }
 			
 		} 
@@ -2755,7 +2759,7 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 
 		// strScreenshotName = ". Screen Shot : " + strScreenshotName;
 
-		return strScreenshotName;
+		return srcFileName;
 	}
 
 	/*******************************************************************************************************************************************************************
