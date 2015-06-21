@@ -2684,19 +2684,19 @@ public static By locatorToByObj(WebDriver driver,String locator) {
 			String strEnv = strEnvDir +"//"+ ConfigDetails.release;
 			CoreLib.createDir(strEnvDir);
 			
-			path=strEnv+"//ScreenShots";
-			CoreLib.createDir(path);
+			/*path=strEnv+"//ScreenShots";
+			CoreLib.createDir(path);*/
 			
 		/*	String name = path+"\\" + ConfigDetails.appName;
 			CoreLib.createDir(name);*/
 
-			path = path + "\\" + testName;
+			/*path = path + "\\" + testName;
 			CoreLib.createDir(path);
 
 			path = path + "\\" + scrShotDir;
-			CoreLib.createDir(path);
+			CoreLib.createDir(path);*/
 			
-			strScreenshotName = path + "\\" + testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
+			strScreenshotName = strEnv + "\\" + testName + "_" + pageName + "_"+ scrShot.format(new Date()) + ".png";
 			File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 			File sreenshotFile = new File(strScreenshotName);

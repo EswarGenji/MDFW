@@ -119,13 +119,13 @@ public class CoreLib {
 			createDir(strEnvDir);
 			
 			
-			String strModuleDir = strEnv+"//log";
+		/*	String strModuleDir = strEnv+"//log";
 			createDir(strModuleDir);
 			
 			String logDirPath = strModuleDir + "//" + strlogDir;
-			createDir(logDirPath);
+			createDir(logDirPath);*/
 			
-			String logFilePath = logDirPath + "//log_" + strModCode + "_"
+			String logFilePath = strEnv + "//log_" + strModCode + "_"
 					+ strLogFileName.format(new Date()) + ".txt";
 			FileAppender appender = new FileAppender();
 			appender.setName("MyFileAppender");
