@@ -17,7 +17,7 @@ import java.util.List;
 			  public static HashMap<String,List<String>> testCasesResutls=new HashMap<String,List<String>>();
 
 			  
-			  public static final int waitTime=10;
+			  public static final int waitTime=20;
               public static String defaultLogo="http://www.seleniumhq.org/images/selenium-ide-logo.png";
               public static String testName="";
             
